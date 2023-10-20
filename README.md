@@ -59,5 +59,3 @@ The file `3-O` contains the big O notations of the time complexity of the Quick 
 - in the best case
 - in the average case
 - in the worst case
-
-
