@@ -18,6 +18,7 @@ void swap(int *x, int *y)
 /**
  * partition - function that choose the pivot
  * @arr: The array to be sorted
+ * @size: size of array
  * @low: the lowest index of array
  * @high: The highest index of array
  * Return: an integer value
@@ -48,6 +49,7 @@ int partition(int arr[], size_t size, int low, int high)
 /**
  * quickSort - function that sort the array
  * @arr: The array to be sorted
+ * @size: size of array
  * @low: lowest index notation of the array
  * @high: Highest index notation of the array
  * Return: Nothing
