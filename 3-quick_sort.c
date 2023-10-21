@@ -37,11 +37,11 @@ int partition(int arr[], int low, int high)
 			/*increment index of smaller element*/
 			se_index++;
 			swap(&arr[se_index], &arr[j]);
-			print_array(arr, high + 1);
+			/*print_array(arr, high + 1);*/
 		}
 	}
 	swap(&arr[se_index + 1], &arr[high]);
-	/*print_array(arr, high + 1);*/
+	print_array(arr, high + 1);
 	return (se_index + 1);
 }
 
