@@ -73,7 +73,7 @@ void quickSort(int arr[], int low, int high)
  * @size: The size of the arry
  * Return: Nothing
  */
-void quick_sort(int *array, size_t size)
+void quick_sort(int *array, int size)
 {
 	if (array == NULL || size < 2)
 	{
