@@ -26,7 +26,7 @@ int partition(int arr[], int low, int high)
 {
 	int pivot, j, se_index; /*se_index - small element index*/
 
-	pivot = arr(high);
+	pivot = arr[high];
 	se_index = low - 1;
 
 	for (j = low; j <= high; j++)
@@ -37,10 +37,12 @@ int partition(int arr[], int low, int high)
 			/*increment index of smaller element*/
 			se_index++;
 			swap(&arr[se_index], &arr[j]);
-			print_array(arr, high + 1);
+			/*print_array(arr, high + 1);*/
 		}
+		/*print_array(arr, high + 1);*/
 	}
 	swap(&arr[se_index + 1], &arr[high]);
+	print_array(arr, high + 1);
 	return (se_index + 1);
 }
 
@@ -78,14 +80,9 @@ void quickSort(int arr[], int low, int high)
  */
 void quick_sort(int *array, size_t size)
 {
-	int low, high;
-
-	low = 0;
-	high = size - 1;
-
-	if (size >= 0 || size < 0)
+	if (array == NULL || size < 2)
 	{
 		return;
 	}
-	quickSort(arr, low, high);
+	quickSort(array, 0, size - 1);
 }
