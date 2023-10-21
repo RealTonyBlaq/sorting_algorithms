@@ -22,7 +22,7 @@ void swap(int *x, int *y)
  * @high: The highest index of array
  * Return: an integer value
  */
-int partition(int arr[], int low, int high)
+int partition(int arr[], size_t size, int low, int high)
 {
 	int pivot, j, se_index; /*se_index - small element index*/
 
@@ -37,11 +37,11 @@ int partition(int arr[], int low, int high)
 			/*increment index of smaller element*/
 			se_index++;
 			swap(&arr[se_index], &arr[j]);
-			print_array(arr, high + 1);
+			print_array(arr, size);
 		}
 	}
 	swap(&arr[se_index + 1], &arr[high]);
-	print_array(arr, high + 1);
+	print_array(arr, size);
 	return (se_index + 1);
 }
 
@@ -52,17 +52,17 @@ int partition(int arr[], int low, int high)
  * @high: Highest index notation of the array
  * Return: Nothing
  */
-void quickSort(int arr[], int low, int high)
+void quickSort(int arr[], size_t size, int low, int high)
 {
 	int p_index;
 
 	if (low < high)
 	{
-		p_index = partition(arr, low, high);
+		p_index = partition(arr, size, low, high);
 		/*sort the left subarray*/
-		quickSort(arr, low, p_index - 1);
+		quickSort(arr, size, low, p_index - 1);
 		/*sort the right subarray*/
-		quickSort(arr, p_index + 1, high);
+		quickSort(arr, size, p_index + 1, high);
 	}
 }
 
@@ -79,5 +79,5 @@ void quick_sort(int *array, size_t size)
 	{
 		return;
 	}
-	quickSort(array, 0, size - 1);
+	quickSort(array, size, 0, size - 1);
 }
