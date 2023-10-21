@@ -41,7 +41,7 @@ int partition(int arr[], int low, int high)
 		}
 	}
 	swap(&arr[se_index + 1], &arr[high]);
-	/*print_array(arr, high + 1);*/
+	print_array(arr, high + 1);
 	return (se_index + 1);
 }
 
