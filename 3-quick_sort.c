@@ -33,7 +33,7 @@ int partition(int arr[], size_t size, int low, int high)
 	for (j = low; j < high; j++)
 	{
 		/*check if element if smaller than the pivot*/
-		if (arr[j] && arr[j] < pivot)
+		if (arr[j] < pivot)
 		{
 			/*increment index of smaller element*/
 			se_index++;
