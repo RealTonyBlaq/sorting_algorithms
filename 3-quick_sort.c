@@ -32,8 +32,6 @@ int partition(int arr[], size_t size, int low, int high)
 
 	for (j = low; j < high; j++)
 	{
-		if (arr[j] == pivot)
-			continue;
 		/*check if element if smaller than the pivot*/
 		if (arr[j] < pivot)
 		{
