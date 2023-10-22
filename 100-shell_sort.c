@@ -1,4 +1,4 @@
-#include <sort.h>
+#include "sort.h"
 /**
  * shell_sort - function that sorts an array of integers
  * in ascending order using the Shell sort algorithm,
@@ -9,7 +9,8 @@
  */
 void shell_sort(int *array, size_t size)
 {
-	size_t gap = 1, i, j;
+	size_t gap = 1;
+	size_t i, j;
 	int temp;
 
 	while (gap < size / 3)
@@ -28,5 +29,6 @@ void shell_sort(int *array, size_t size)
 			array[j] = temp;
 		}
 		print_array(array, size);
+		gap /= 3;
 	}
 }
