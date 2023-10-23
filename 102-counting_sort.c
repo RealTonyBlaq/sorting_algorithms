@@ -3,7 +3,7 @@
 /**
  * get_maximum - Function that get the maximum value
  * in an array of integer.
- * @array: An array of integer
+ * @arr: An array of integer
  * @size: The size of the array
  * Return: The maximum integer in the array.
  */
@@ -49,7 +49,7 @@ void counting_sort(int *array, size_t size)
 	for (i = 0; i < (max + 1); i++)
 		count[i] += count[i - 1];
 	print_array(count, max + 1);
-	
+
 	for (i = 0; i < (int)size; i++)
 	{
 		sorted[count[array[i]] - 1] = array[i];
