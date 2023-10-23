@@ -29,6 +29,7 @@ int partition(int arr[], size_t size, int low, int high);
 void swap(int *x, int *y);
 void shell_sort(int *array, size_t size);
 void counting_sort(int *array, size_t size);
+int get_maximum(int *arr, int size);
 void cocktail_sort_list(listint_t **list);
 int check_sorted(listint_t **list);
 
