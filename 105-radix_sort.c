@@ -41,7 +41,7 @@ void radix_counting_sort(int *arr, size_t size, int signi, int *sorted)
 		count[(arr[i] / signi) % 10] -= 1;
 	}
 	for (i = 0; i < size; i++)
-		array[i] = sorted[i];
+		arr[i] = sorted[i];
 }
 /**
  * radix_sort - function that sorts an array of integers
