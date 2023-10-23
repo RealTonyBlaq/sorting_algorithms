@@ -37,5 +37,7 @@ void merge_array(int *arr, int *sorted, size_t right, size_t mid, size_t left);
 void recursive_merge_sort(int *arr, int *sorted, size_t right, size_t left);
 listint_t *head_swap(listint_t **list, listint_t *head);
 listint_t *tail_swap(listint_t **list, listint_t *tail);
+void heap_sort(int *array, size_t size);
+void siftDown(int *array, size_t size, size_t root);
 
 #endif /* SORT_H */
