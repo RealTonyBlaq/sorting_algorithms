@@ -11,10 +11,10 @@ int get_maximum(int *arr, int size)
 {
 	int max, i;
 
-	for (max = array[0], i = 1; i < size; i++)
+	for (max = arr[0], i = 1; i < size; i++)
 	{
-		if (array[i] > max)
-			max = array[i];
+		if (arr[i] > max)
+			max = arr[i];
 	}
 	return (max);
 }
