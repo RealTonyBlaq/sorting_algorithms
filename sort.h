@@ -32,6 +32,9 @@ void counting_sort(int *array, size_t size);
 int get_maximum(int *arr, int size);
 void cocktail_sort_list(listint_t **list);
 int check_sorted(listint_t **list);
+void merge_sort(int *array, size_t size);
+void merge_array(int *arr, int *sorted, size_t right, size_t mid, size_t left);
+void recursive_merge_sort(int *arr, int *sorted, size_t right, size_t left);
 listint_t *head_swap(listint_t **list, listint_t *head);
 listint_t *tail_swap(listint_t **list, listint_t *tail);
 
