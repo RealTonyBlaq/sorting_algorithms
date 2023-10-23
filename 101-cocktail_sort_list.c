@@ -25,7 +25,10 @@ void cocktail_sort_list(listint_t **list)
 			while (tail)
 			{
 				if (tail->prev && tail->n < tail->prev->n)
+				{
 					tail = tail_swap(list, tail);
+					continue;
+				}
 				tail = tail->prev;
 			}
 			head = *list;
