@@ -13,6 +13,7 @@ void siftDown(int *array, size_t size, size_t root)
 	size_t largest = root;
 	size_t left = 2 * root + 1;
 	size_t right = 2 * root + 2;
+	int temp;
 
 	/* If left child is larger than root */
 	if (left < size && array[left] > array[largest])
@@ -26,9 +27,10 @@ void siftDown(int *array, size_t size, size_t root)
 	if (largest != root)
 	{
 		/* Swap the largest element with the root */
-		int temp = array[root];
+		temp = array[root];
 		array[root] = array[largest];
 		array[largest] = temp;
+		print_array(array, size);
 
 		/* Recursively sift down the affected sub-tree */
 		siftDown(array, size, largest);
@@ -45,20 +47,19 @@ void siftDown(int *array, size_t size, size_t root)
  */
 void heap_sort(int *array, size_t size)
 {
-	int i;
+	int i, temp;
 
 	for (i = size / 2 - 1; i >= 0; i--)
-	{
 		siftDown(array, size, i);
-	}
 
 	/* Extract elements from the heap one by one */
 	for (i = size - 1; i > 0; i--)
 	{
 		/* Move the current root (maximum element) to the end */
-		int temp = array[0];
+		temp = array[0];
 		array[0] = array[i];
 		array[i] = temp;
+		print_array(array, size);
 
 		siftDown(array, i, 0);
 	}
