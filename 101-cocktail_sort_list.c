@@ -104,29 +104,29 @@ listint_t *head_swap(listint_t **list, listint_t *head)
 */
 listint_t *tail_swap(listint_t **list, listint_t *tail)
 {
-	listint_t *next_node, *current;
+	listint_t *prev_node, *current;
 
-	next_node = tail;
+	prev_node = tail;
 	tail->prev->next = tail->next;
 	if (tail->next)
 		tail->next->prev = tail->prev;
 	current = tail->prev;
-	next_node->prev = NULL;
-	next_node->next = NULL;
+	prev_node->prev = NULL;
+	prev_node->next = NULL;
 	if (current->prev)
 	{
-		next_node->prev = current->prev;
-		current->prev->next = next_node;
-		next_node->next = current;
-		current->prev = next_node;
+		prev_node->prev = current->prev;
+		current->prev->next = prev_node;
+		prev_node->next = current;
+		current->prev = prev_node;
 	}
 	else
 	{
-		next_node->next = current;
-		current->prev = next_node;
-		*list = next_node;
+		prev_node->next = current;
+		current->prev = prev_node;
+		*list = prev_node;
 	}
 	print_list(*list);
 
-	return (next_node);
+	return (prev_node);
 }
