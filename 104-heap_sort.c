@@ -1,14 +1,15 @@
 #include "sort.h"
 
 /**
- * siftDown - Function that sifts down a element in a heap
+ * siftDown - Function that sifts down an element in a heap
  * @array: The array of numbers
  * @size: Size of the array
  * @root: The root containing the maximum element
+ * @s_copy: Size copy
  *
  * Return: Nothing
  */
-void siftDown(int *array, size_t size, size_t root)
+void siftDown(int *array, size_t size, size_t root, size_t s_copy)
 {
 	size_t largest = root;
 	size_t left = 2 * root + 1;
@@ -30,10 +31,10 @@ void siftDown(int *array, size_t size, size_t root)
 		temp = array[root];
 		array[root] = array[largest];
 		array[largest] = temp;
-		print_array(array, size);
+		print_array(array, s_copy);
 
 		/* Recursively sift down the affected sub-tree */
-		siftDown(array, size, largest);
+		siftDown(array, size, largest, s_copy);
 	}
 }
 
@@ -50,7 +51,7 @@ void heap_sort(int *array, size_t size)
 	int i, temp;
 
 	for (i = size / 2 - 1; i >= 0; i--)
-		siftDown(array, size, i);
+		siftDown(array, size, i, size);
 
 	/* Extract elements from the heap one by one */
 	for (i = size - 1; i > 0; i--)
@@ -61,6 +62,6 @@ void heap_sort(int *array, size_t size)
 		array[i] = temp;
 		print_array(array, size);
 
-		siftDown(array, i, 0);
+		siftDown(array, i, 0, size);
 	}
 }
