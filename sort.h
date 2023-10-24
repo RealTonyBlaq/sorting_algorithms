@@ -42,5 +42,9 @@ void siftDown(int *array, size_t size, size_t root, size_t s_copy);
 void radix_sort(int *array, size_t size);
 int get_max(int *array, int size);
 void radix_counting_sort(int *arr, size_t size, int signi, int *sorted);
+void quick_sort_hoare(int *array, size_t size);
+void hoare(int *array, size_t size, int low, int high);
+int partition_scheme(int *array, size_t size, int low, int high);
+void swap_index(int *index1, int *index2);
 
 #endif /* SORT_H */
