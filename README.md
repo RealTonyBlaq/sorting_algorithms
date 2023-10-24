@@ -5,7 +5,7 @@ A Sorting Algorithm is used to rearrange a given array or list of elements accor
 ### `sort.h` is the header file containing all function prototypes for this project.
 
 ## TASKS
-## Bubble sort (Files: `0-bubble_sort.c`, `0-O`)
+## Bubble Sort (Files: `0-bubble_sort.c`, `0-O`)
 A function that sorts an array of integers in ascending order using the Bubble sort algorithm
 
 ### Prototype: `void bubble_sort(int *array, size_t size);`
@@ -18,7 +18,7 @@ The file `0-O` contains the big O notations of the time complexity of the Bubble
 - in the average case
 - in the worst case
 
-## Insertion sort (Files: `1-insertion_sort_list.c`, `1-O`)
+## Insertion Sort (Files: `1-insertion_sort_list.c`, `1-O`)
 
 A function that sorts a doubly linked list of integers in ascending order using the Insertion sort algorithm.
 
@@ -32,7 +32,7 @@ The file `1-O` contains the big O notations of the time complexity of the Insert
 - in the average case
 - in the worst case
 
-## Selection sort (Files: `2-selection_sort.c`, `2-O`)
+## Selection Sort (Files: `2-selection_sort.c`, `2-O`)
 A function that sorts an array of integers in ascending order using the Selection sort algorithm
 
 ### Prototype: `void selection_sort(int *array, size_t size);`
@@ -45,7 +45,7 @@ The File `2-O` contains the big O notations of the time complexity of the Select
 - in the average case
 - in the worst case
 
-## Quick sort (Files: `3-quick_sort.c`, `3-O`)
+## Quick Sort (Files: `3-quick_sort.c`, `3-O`)
 A function that sorts an array of integers in ascending order using the Quick sort algorithm
 
 ### Prototype: `void quick_sort(int *array, size_t size);`
@@ -62,7 +62,7 @@ The file `3-O` contains the big O notations of the time complexity of the Quick 
 - in the average case
 - in the worst case
 
-## Shell sort (File: `100-shell_sort.c`)
+## Shell Sort (File: `100-shell_sort.c`)
 A function that sorts an array of integers in ascending order using the Shell sort algorithm, using the Knuth sequence
 
 ### Prototype: `void shell_sort(int *array, size_t size);`
@@ -75,7 +75,7 @@ The array is printed each time the interval decreases.
 
 The shell sort algorithm doesn't have any Big O notation because it's time complexity depends on the size of the array and gap.
 
-## Cocktail shaker sort (Files: `101-cocktail_sort_list.c, 101-O`)
+## Cocktail Shaker Sort (Files: `101-cocktail_sort_list.c, 101-O`)
 
 A function that sorts a doubly linked list of integers in ascending order using the Cocktail shaker sort algorithm.
 
