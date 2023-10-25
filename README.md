@@ -144,3 +144,17 @@ A function that sorts an array of integers in ascending order using the Radix so
 ### Prototype: `void radix_sort(int *array, size_t size);`
 
 The LSD radix sort algorithm was implemented and it was assumed that the array will contain only numbers >= 0. Once the significant digit increases, the array is printed.
+
+
+## Quick Sort - Hoare Partition (Files: `107-quick_sort_hoare.c, 107-O`)
+
+A function that sorts an array of integers in ascending order using the Quick sort algorithm and implementing the Hoare Partition scheme. The pivot is always the last element of the partition being sorted and the array is printed after each swap.
+
+### Prototype: `void quick_sort_hoare(int *array, size_t size);`
+
+
+File `107-O` holds the big O notations of the time complexity of the Quick sort algorithm, with 1 notation per line:
+
+- in the best case
+- in the average case
+- in the worst case
