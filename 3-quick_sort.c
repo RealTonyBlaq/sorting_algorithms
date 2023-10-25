@@ -64,8 +64,6 @@ void quickSort(int arr[], size_t size, int low, int high)
 {
 	int p_index;
 
-	if (low >= high || low < 0)
-		return;
 	if (low < high)
 	{
 		p_index = partition(arr, size, low, high);
